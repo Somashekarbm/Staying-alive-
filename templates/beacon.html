@@ -1,0 +1,88 @@
+<head>
+    <title>Beacon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #bfdaf0, #cfeb9d, #bfdaf0);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        h1{
+            font-size: 4.6rem;
+            margin-top: 85px;
+        }
+        h2{
+            font-size: 2.2rem;
+            margin-top: 45px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        label {
+            font-size: 1.6rem;
+            margin-top: 20px;
+            color: rgba(255,35,15,0.8);
+        }
+
+        input[type="text"] {
+            font-size: 2rem;
+        }
+
+        button[type="submit"] {
+            font-size: 1.5rem;
+            background-color: #4CAF50;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3950ce;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Beacon</h1>
+    <h2>Welcome, {{ username }}!</h2>
+    <form method="POST">
+        <label for="signal">Distress Signal:</label><br>
+        <input type="text" id="signal" name="signal" required><br><br>
+        <button type="submit">Send</button>
+    </form>
+</body>
+
+</html>

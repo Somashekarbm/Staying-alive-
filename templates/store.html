@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beacon Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #bfdaf0, #bfd8f0, #bfdaf0);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'poppins', sans-serif;
+        }
+        h1{
+            text-align: center;
+            font-family: 'poppins', sans-serif;
+            font-size: 3.6rem;
+            margin-top: 9rem;
+        }
+        p{
+            width: 50%;
+            text-align: center;
+            font-family: 'poppins', sans-serif;
+            font-size: 1.6rem;
+            margin-top:  5rem;
+            margin-left: auto;
+            margin-right: auto;
+           
+        }
+        .button{
+            display: flexbox;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 60px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-family: 'poppins', sans-serif;
+            margin-top: 10px;
+            
+        }
+
+        .button:hover{
+            background-color: #3950ce;
+        }
+
+
+        div{
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+    
+    </style>
+    <script>
+        function goBack() {
+            // Redirect the user to the previous page
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <h1>Beacon Store</h1>
+    <p>Welcome to the Beacon Store! Explore our wide range of emergency preparedness and safety products.</p>
+    <div>
+    <button onclick="goBack()" class="button">Go Back</button>
+    </div>
+</body>
+</html>

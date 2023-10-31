@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            background: linear-gradient(to right, #bfdaf0, #cfeb9d, #bfdaf0);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'poppins', sans-serif;
+        }
+      
+
+        h1 {
+            text-align: center;
+            margin-left: auto;
+            font-family: 'poppins', sans-serif;
+            font-size: 3.6rem;
+        }
+
+        form {
+            /* centering the form element*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'poppins', sans-serif;
+
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            font-size: 1.4rem;
+        }
+
+        input[type="submit"] {
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-family: 'poppins', sans-serif;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3950ce;
+        }
+        input[type="text"],input[type="password"]{
+            font-size: 18px;
+        }
+
+        .error {
+            display: block;
+            margin: 0 auto;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Sign In</h1>
+    {% if error_message %}
+    
+    <p class="error">{{ error_message }}</p>
+   
+    {% endif %}
+    <form action="/signin" method="post">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required><br><br>
+        </div>
+        <input type="submit" value="Sign In">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>staying-alive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, rgb(238, 204, 232), #dfc4c5, rgb(238, 204, 232));
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 55px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .signupwrap{
+            
+            margin-right: 150px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .signinwrap{
+            margin-left: 150px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        button{
+            background-color: #4caf50;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 20px;
+            font-family: 'poppins', sans-serif;
+            
+        }
+        .signup,.signin{
+            color: #ffffff;
+        }
+        .signupwrap:hover,.signinwrap:hover{
+            color: #3950ce;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>staying-alive</h1>
+    </div>
+    <div class="links">
+        <div class=""signupwrap>
+        <button><a href="/signup" class="signup">Sign Up</a></button>
+    </div>
+    <div class="signinwrap">
+        <button><a href="/signin" class="signin">Sign In</a></button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+venv/
+env/
+.vscode/
+/users.db
+/disaster.db
+/app.log
+*.log

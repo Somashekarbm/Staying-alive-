@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(to right, #bfdaf0, #cfeb9d, #bfdaf0);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'poppins', sans-serif;
+        }
+
+
+        h1 {
+            text-align: center;
+            font-family: 'poppins', sans-serif;
+            font-size: 3.6rem;
+        }
+
+        form {
+            /* centering the form element*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+
+        }
+
+        input[type="button"],
+        input[type="submit"] {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-family: 'poppins', sans-serif;
+            margin-top: 10px;
+        }
+
+        input[type="button"]:hover,
+        input[type="submit"]:hover {
+            background-color: #3950ce;
+        }
+
+        .fetch {
+            width: 150px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-family: 'poppins', sans-serif;
+            margin-top: 20px;
+        }
+
+        .fetch:hover {
+            background-color: #3950ce;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-family: 'poppins', sans-serif;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        label {
+            font-family: 'poppins', sans-serif;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            outline: none;
+            border: 1px solid #3950ce;
+        }
+
+        body {
+            background-color: (140, 120, 45, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sign Up</h1>
+    <form action="/signup" method="post">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" name="location" id="location" readonly>
+            <button type="button" onclick="getLocation()" class="fetch">Fetch Location</button>
+        </div>
+
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            var locationInput = document.getElementById("location");
+            locationInput.value = position.coords.latitude + ", " + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>
